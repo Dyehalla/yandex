@@ -9,6 +9,7 @@ def partial_sums(*numbers):
     Oleg = list([*numbers])
     for i in range(len(Oleg)):
         result.append(sum(Oleg[:i + 1]))
-    print(result)
+    return (result)
 
-partial_sums()
+
+# partial_sums() - это лишнее, просто для проверки
