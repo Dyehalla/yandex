@@ -1,4 +1,4 @@
-words = []
+'''words = []
 keys = []
 another_words = []
 result = []
@@ -14,4 +14,13 @@ for i in words:
 
 for i in another_words:
     sorted(i)
-    print(*i)
+    print(*i)'''
+
+
+def tribonacci(n):
+    if 0 <= n <= 1:
+        return 0
+    elif 2 <= n <= 3:
+        return 1
+    else:
+        return tribonacci(n - 1) + tribonacci(n - 2) + tribonacci(n - 3)
