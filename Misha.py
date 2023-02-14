@@ -17,10 +17,19 @@ for i in another_words:
     print(*i)'''
 
 
-def tribonacci(n):
-    if 0 <= n <= 1:
-        return 0
-    elif 2 <= n <= 3:
-        return 1
+def is_hypersimple(number):
+    for i in range(2, number):
+        if number % i == 0:
+            return False
+    return True
+
+
+number = int(input())
+while (number != 0):
+    if is_hypersimple(number):
+        number //= 10
     else:
-        return tribonacci(n - 1) + tribonacci(n - 2) + tribonacci(n - 3)
+        print("NO")
+        break
+else:
+    print("YES")
