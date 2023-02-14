@@ -10,7 +10,7 @@ for i in words:
     else:
         keys.append(sorted(list(i)))
         another_words.append([])
-        another_words[keys.index(sorted(list(i)))].append(i)
+        another_words[keys.index(sorted(list(i)))].append(i)j
 
 for i in another_words:
     sorted(i)
