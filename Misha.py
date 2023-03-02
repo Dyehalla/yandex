@@ -43,7 +43,18 @@ oleg.reverse()
 print(*oleg)
 
 # пятая
-# Нет
+
+pre_zero, post_zero, zeros = [], [], []
+initial = [int(i) for i in input().split()]
+for i in initial:
+    if i > 0:
+        pre_zero.append(i)
+    elif i < 0:
+        post_zero.append(i)
+    elif i == 0:
+        zeros.append(i)
+pre_zero.sort()
+print(*pre_zero, *zeros, *post_zero)
 
 # Седьмая
 
