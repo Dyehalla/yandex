@@ -15,9 +15,9 @@ for i in words:
 for i in another_words:
     sorted(i)
     print(*i)'''
-
-
+'''
 def is_hypersimple(number):
+
     for i in range(2, number):
         if number % i == 0:
             return False
@@ -33,3 +33,33 @@ while (number != 0):
         break
 else:
     print("YES")
+'''
+# Первая
+print([int(i) for i in input().split()].count(int(input())))
+
+# Третья
+oleg = [int(i) for i in input().split()]
+oleg.reverse()
+print(*oleg)
+
+# пятая
+# Нет
+
+# Седьмая
+
+oleg = [int(i) for i in input().split()]
+oleg.sort()
+print(*oleg[0:3])
+
+# Девятая
+
+output = []
+oleg = [int(i) for i in input().split()]
+div, div_not = map(int, input().split())
+for i in oleg:
+    if i % div == 0 and i % div_not != 0 and len(str(i)) == 3:
+        output.append(i)
+if output == []:
+    print(0)
+else:
+    print(*output)
