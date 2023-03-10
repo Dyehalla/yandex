@@ -1,25 +1,35 @@
-words_amount = int(input())
-words = list()
-result = list()
-for _ in range(words_amount):
-    words.append(input().lower())
+"""
+# 1
+input()
+print(*sorted(input().split(), key=lambda num: (int(num) % 10, int(num))))
 
-for word1 in words:
-    first_word = True
-    for word2 in words:
-        if words.index(word1) != words.index(word2):
-            if sorted(list(word1)) == sorted(list(word2)):
-                if first_word:
-                    result.append([word1, word2])
-                    first_word = False
-                    index = len(result) - 1
-                else:
-                    result[index].append(word2)
-        if not first_word:
-            result[index].sort()
-    for i in result[index]:
-        words.remove(i)
+# 3
+import statistics
+print(statistics.median(map(int, input().split())))
 
+# 5
 
-for res in sorted(result, key=lambda lst: lst[0]):
-    print(*res)
+lst = input().split()
+print(*sorted(map(int, lst)))
+print(len(set(lst)))
+
+# 7
+lst = input().split()
+k, m, d = map(int, input().split())
+res = lst[:k] + list(map(str, sorted(map(int, lst[k:m + 1]))[::d])) + lst[m + 1:]
+print(*res)
+"""
+
+# 9
+lst = list(map(int, input().split()))
+
+while True:
+    if not lst:
+        print(-1)
+        break
+    i = max(lst)
+    if lst.count(i) > 1:
+        print(i)
+        break
+    else:
+        lst.remove(i)
